@@ -1,0 +1,143 @@
+
+
+    <div class="container bg-light">
+        <div class="row mt-4">
+            <div class="col-3 my-4">
+                <div class="nav flex-column nav-pills" id="sideBar" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="myAccountTab" data-toggle="pill" href="#myAccountContent" role="tab"
+                        aria-controls="myAccountContent" aria-selected="true">My Account</a>
+                    <a class="nav-link" id="paymentTab" data-toggle="pill" href="#paymentContent" role="tab"
+                        aria-controls="paymentContent" aria-selected="false">Make a Payment</a>
+                        <a class="nav-link" id="lendingTab" data-toggle="pill" href="#lendingContent" role="tab"
+                           aria-controls="lendingContent" aria-selected="false">Lending</a>
+
+                </div>
+
+            </div>
+            <div class="col-9">
+                <div class="tab-content" id="sideBarContent">
+                    <div class="tab-pane fade show active" id="myAccountContent" role="tabpanel">
+
+                        <div class="container mt-3">
+                            <div class="row">
+                                <div class="col-3 offset-3">
+                                    <div class="labelText h5">Account Balance:</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="valueText h5">$100,000.33</div>
+                                </div>
+                            </div> <!--!row-->
+                            <div class="row">
+                                <div class="col-3 offset-3">
+                                    <div class="labelText h5">Loan Balance:</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="valueText h5">-$13,473.22</div>
+                                </div>
+                            </div> <!--!row-->
+
+                            <form name="accountForm">
+                                <div class="row my-4">
+                                    <div class="col-4 offset-4">
+                                        <div class="form-group">
+                                            <label for="amount">Enter Amount</label>
+                                            <input type="number" name="amount" class="form-control form-control-lg" />
+                                        </div>
+                                    </div>
+                                </div> <!--row my-4-->
+                                <div class="row mb-3">
+                                    <div class="col-2 offset-8">
+                                        <button id="btnDeposit" class="btn btn-success btn-fullsized">Deposit</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button id="btnWithdraw" class="btn btn-danger btn-fullsized">Withdraw</button>
+                                    </div>
+                                </div> <!--row mb-3-->
+                            </form>
+                        </div> <!--!container-->
+                    </div> <!--!myAccountContent-->
+
+                    <div class="tab-pane fade" id="paymentContent" role="tabpanel">
+                        <div class="container mt-3">
+                            <div class="row">
+                                <div class="col-3 offset-3">
+                                    <div class="labelText h5">Account Balance:</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="valueText h5">$100,000.33</div>
+                                </div>
+                            </div> <!--!row-->
+                            <div class="row">
+                                <div class="col-3 offset-3">
+                                    <div class="labelText h5">Loan Balance:</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="valueText h5">-$13,473.22</div>
+                                </div>
+                            </div> <!--!row-->
+
+                            <form name="paymentForm">
+                                <div class="row my-4">
+                                    <div class="col-4 offset-4">
+                                        <div class="form-group">
+                                            <label for="amount">Enter Amount</label>
+                                            <input type="number" name="amount" class="form-control form-control-lg" />
+                                        </div>
+                                    </div>
+                                </div> <!--row my-4-->
+                                <div class="row mb-3">
+                                    <div class="col-3 offset-9">
+                                        <button id="btnPayNow" class="btn btn-success btn-fullsized">Pay Now</button>
+                                    </div>
+                                </div> <!--row mb-3-->
+                            </form>
+                        </div> <!--!container-->
+                    </div> <!--paymentContent-->
+
+                    <div class="tab-pane fade" id="lendingContent" role="tabpanel">
+                        <div class="container mt-3">
+                            <div class="row">
+                                <div class="col-3 offset-3">
+                                    <div class="labelText h5">Account Balance:</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="valueText h5">$100,000.33</div>
+                                </div>
+                            </div> <!--!row-->
+                            <div class="row">
+                                <div class="col-3 offset-3">
+                                    <div class="labelText h5">Loan Balance:</div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="valueText h5">-$13,473.22</div>
+                                </div>
+                            </div> <!--!row-->
+
+                            <form name="lendingForm">
+                                <div class="row my-4">
+                                    <div class="col-4 offset-4">
+                                        <div class="form-group">
+                                            <label for="amount">Enter Amount</label>
+                                            <input type="number" name="amount" class="form-control form-control-lg" />
+                                        </div>
+                                    </div>
+                                </div> <!--row my-4-->
+                                <div class="row mb-3">
+                                    <div class="col-3 offset-9">
+                                        <button id="btnPayNow" class="btn btn-danger btn-fullsized">Request Loan</button>
+                                    </div>
+                                </div> <!--row mb-3-->
+                            </form>
+                        </div> <!--!container-->
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+   
+
+

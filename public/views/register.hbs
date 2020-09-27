@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <img width="200" height="200" src="/img/logo.png" class="mx-auto d-block" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <form name="registerForm" class="border rounded p-4 mb-5">
+                <div class="form-row">
+                    <label for="nameRow">Name</label>
+                </div>
+                <div class="form-row" id="nameRow">
+                    <div class="col-6 ">
+                        <input name="firstName" type="text" class="form-control" placeholder="First Name" required />
+                    </div>
+                    <div class="col-6 ">
+                        <input name="lastName" type="text" class="form-control" placeholder="Last Name" required/>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="emailInput">Email Address</label>
+                    <input name="emailInput" type="email" class="form-control" placeholder="example123@gmail.com" required/>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="dobInput">Date of Birth</label>
+                    <input name="dobInout" type="date" class="form-control" required/>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="phoneInput">Phone Number</label>
+                    <input name="phoneInput" type="tel" class="form-control" placeholder="9999999999" />
+                </div>
+
+
+                <div class="form-group mt-5">
+                    <label for="usernameInput">Username</label>
+                    <input name="usernameInput" type="text" class="form-control" placeholder="username" required/>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="passwordInput">Password</label>
+                    <input name="passwordInput" type="password" class="form-control" placeholder="password" required/>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="confirmPasswordInput">Confirm Password</label>
+                    <input name="confirmPasswordInput" type="password" class="form-control" placeholder="confirm password" required/>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="imageUpload">Upload Profile Picture</label>
+                    <input name="imageUpload" type="file" class="form-control"/>
+                </div>
+                
+                <input type="submit" class="btn btn-primary form-control w-100 mt-3" value="Register">
+            </form>
+        </div>
+    </div>
+</div>
