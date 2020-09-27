@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const handlebars = require("express-handlebars");
 const path = require("path");
-
+const session = require("express-session");
 
 const accountController = require("./controllers/accountController");
 const homeController = require("./controllers/homeController");
@@ -20,7 +20,19 @@ app.engine('.hbs', handlebars({
 }));
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+app.use(session({
+    secret: "asdfsdfsdf32f2r32ar",
+    saveUninitialized: true,
+    resave: false
+}))
+
+app.use((req, res, next) => {
+    res.locals = req.session;
+
+    next();
+})
 
 const HTTP_PORT = process.env.PORT || 8080;
 

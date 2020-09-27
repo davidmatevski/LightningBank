@@ -22,9 +22,22 @@ const UserSchema = new mongoose.Schema({
         type: Number,
         required: false
     },
+    username:{
+        type: String,
+        required: true
+    },
     password:{
         type: String,
         required: true
+    },
+    profilePicture:{
+        type: String,
+        required: false
+    },
+    dateRegistered:{
+        type: Date,
+        required: true,
+        default: Date.now
     }
 })
 

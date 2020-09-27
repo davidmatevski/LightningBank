@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 
 const AccountSchema = new mongoose.Schema({
 
+    userID:{
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
+    },
     balance: {
         type: Number,
         default: 0

@@ -4,7 +4,6 @@ const router = express.Router();
 
 // GET /home
 router.get("/home", (req,res)=>{
-    console.log("home")
     res.render("index");
 })
 
