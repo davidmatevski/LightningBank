@@ -1,2 +1,8 @@
-Once you have the .env, simply type 'node server.js' in the console and open a web browser tab and go 
-to a local route ex.(localhost:8080);
+once you have the db key
+paste the key in a file called .env
+example DBKEY=db_key_goes_here
+once all node modules are installed type
+node server.js
+in the console, and open a web browser page on localhost8080 or a local route of your choosing.
+
+thank you, enjoy.
