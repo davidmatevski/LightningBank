@@ -1,0 +1,2 @@
+Once you have the .env, simply type 'node server.js' in the console and open a web browser tab and go 
+to a local route ex.(localhost:8080);
