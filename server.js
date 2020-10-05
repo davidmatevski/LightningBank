@@ -34,7 +34,7 @@ app.use((req, res, next) => {
     next();
 })
 
-const HTTP_PORT = process.env.PORT || 8080;
+const HTTP_PORT = process.env.PORT || 8081;
 
 app.use("/account", accountController);
 app.use("/", homeController);
@@ -48,6 +48,10 @@ app.get("/", (req, res)=>{
 
 app.get("*", (req,res)=>{
     res.render("pageNotFound");
+})
+
+app.get("/lending", (req,res)=>{
+    res.render("lending");
 })
 
 app.use((err,req,res,next)=>{

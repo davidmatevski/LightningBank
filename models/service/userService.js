@@ -1,7 +1,11 @@
 const User = require("../schema/user");
+const userValidator = require("../validators/userValidator");
 
 async function createUser(userData) {
-    console.log(userData);
+    var validationErrors = [];
+    if (!userValidator.validateUser(userData, validationErrors)) {
+        throw validationErrors;
+    }
 
     try {
         var newUser = new User({
@@ -14,8 +18,10 @@ async function createUser(userData) {
             username: userData.username,
             password: userData.password
         });
-        await newUser.save({}, (err, doc) => {
-        });
+
+        await newUser.save();
+
+        console.log(`New user ${userData.username} has been created`);
 
         return newUser;
     } catch (err) {

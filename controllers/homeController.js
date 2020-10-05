@@ -14,7 +14,7 @@ router.get("/about", (req,res)=>{
 
 // GET /lending
 router.get("/lending", (req,res)=>{
-
+    res.render("lending");
 })
 
 module.exports = router;

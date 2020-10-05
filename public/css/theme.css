@@ -1,3 +1,13 @@
 .btn-fullsized {
     width: 100%;
 }
+
+.spinner-lg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.spinner-xl {
+    width: 9rem;
+    height: 9rem;
+}

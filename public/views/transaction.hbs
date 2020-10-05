@@ -1,7 +1,22 @@
+    <div class="container">
+        <div class="row mt-4">
+            <div id="msgSection" class="col">
 
+            </div>
+        </div>
+    </div>
 
     <div class="container bg-light">
-        <div class="row mt-4">
+        <div class="row mt-4 pt-3">
+            <div class="col">
+                <div class="h5">
+                    <span class="badge badge-primary mr-2">Account ID</span>
+                    {{userFriendlyID}} 
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
             <div class="col-3 my-4">
                 <div class="nav flex-column nav-pills" id="sideBar" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="myAccountTab" data-toggle="pill" href="#myAccountContent" role="tab"
@@ -24,7 +39,7 @@
                                     <div class="labelText h5">Account Balance:</div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="valueText h5">$100,000.33</div>
+                                    <div class="valueText h5">${{balance}}</div>
                                 </div>
                             </div> <!--!row-->
                             <div class="row">
@@ -32,11 +47,13 @@
                                     <div class="labelText h5">Loan Balance:</div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="valueText h5">-$13,473.22</div>
+                                    <div class="valueText h5">-${{loanBalance}}</div>
                                 </div>
                             </div> <!--!row-->
 
                             <form name="accountForm">
+                                <input type="hidden" name="accountID" value="{{userFriendlyID}}" />
+
                                 <div class="row my-4">
                                     <div class="col-4 offset-4">
                                         <div class="form-group">
@@ -47,10 +64,10 @@
                                 </div> <!--row my-4-->
                                 <div class="row mb-3">
                                     <div class="col-2 offset-8">
-                                        <button id="btnDeposit" class="btn btn-success btn-fullsized">Deposit</button>
+                                        <div id="btnDeposit" class="btn btn-success btn-fullsized">Deposit</div>
                                     </div>
                                     <div class="col-2">
-                                        <button id="btnWithdraw" class="btn btn-danger btn-fullsized">Withdraw</button>
+                                        <div id="btnWithdraw" class="btn btn-danger btn-fullsized">Withdraw</div>
                                     </div>
                                 </div> <!--row mb-3-->
                             </form>
@@ -64,7 +81,7 @@
                                     <div class="labelText h5">Account Balance:</div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="valueText h5">$100,000.33</div>
+                                    <div class="valueText h5">${{balance}}</div>
                                 </div>
                             </div> <!--!row-->
                             <div class="row">
@@ -72,11 +89,13 @@
                                     <div class="labelText h5">Loan Balance:</div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="valueText h5">-$13,473.22</div>
+                                    <div class="valueText h5">-${{loanBalance}}</div>
                                 </div>
                             </div> <!--!row-->
 
                             <form name="paymentForm">
+                              <input type="hidden" name="accountID" value="{{userFriendlyID}}" />
+                              
                                 <div class="row my-4">
                                     <div class="col-4 offset-4">
                                         <div class="form-group">
@@ -87,7 +106,7 @@
                                 </div> <!--row my-4-->
                                 <div class="row mb-3">
                                     <div class="col-3 offset-9">
-                                        <button id="btnPayNow" class="btn btn-success btn-fullsized">Pay Now</button>
+                                        <div id="btnPayNow" class="btn btn-success btn-fullsized">Pay Now</div>
                                     </div>
                                 </div> <!--row mb-3-->
                             </form>
@@ -101,7 +120,7 @@
                                     <div class="labelText h5">Account Balance:</div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="valueText h5">$100,000.33</div>
+                                    <div class="valueText h5">${{balance}}</div>
                                 </div>
                             </div> <!--!row-->
                             <div class="row">
@@ -109,11 +128,13 @@
                                     <div class="labelText h5">Loan Balance:</div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="valueText h5">-$13,473.22</div>
+                                    <div class="valueText h5">-${{loanBalance}}</div>
                                 </div>
                             </div> <!--!row-->
 
                             <form name="lendingForm">
+                              <input type="hidden" name="accountID" value="{{userFriendlyID}}" />
+
                                 <div class="row my-4">
                                     <div class="col-4 offset-4">
                                         <div class="form-group">
@@ -124,7 +145,7 @@
                                 </div> <!--row my-4-->
                                 <div class="row mb-3">
                                     <div class="col-3 offset-9">
-                                        <button id="btnPayNow" class="btn btn-danger btn-fullsized">Request Loan</button>
+                                        <div id="btnLoan" class="btn btn-danger btn-fullsized">Request Loan</div>
                                     </div>
                                 </div> <!--row mb-3-->
                             </form>
@@ -140,4 +161,20 @@
     </div>
    
 
+<!-- Action Loading Modal -->
+ <div class="modal" id="actionLoadingModal" tabindex="-2" role="dialog" aria-labelledby="actionLoadingModalTitle"
+     aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+         <div class="modal-content">
+             <div class="modal-body">
+                 <div class="text-center">
+                     <div class="spinner-grow text-primary spinner-xl" role="status">
+                         <span class="sr-only">Transaction...</span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!-- !Action Loading Modal -->
 

@@ -4,15 +4,15 @@
             <img width="200" height="200" src="/img/logo.png" class="mx-auto d-block" />
         </div>
     </div>
-    {{#if error}}
+    {{#each errors}}
     <div class="row">
         <div class="col-6 offset-3">
             <div class="alert alert-danger" role="alert">
-              {{error}}  
+              {{message}}  
             </div>
         </div>
     </div>
-    {{/if}}
+    {{/each}}
     <div class="row">
         <div class="col-6 offset-3">
             <form name="registerForm" class="border rounded p-4 mb-5" method="POST" action="/account/register" enctype="application/x-www-form-urlencoded">
